@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login</title>
+	<title>Callback</title>
 </head>
 <body>
 <?php
@@ -9,6 +9,8 @@
 // error_log("error_message", 3, "log.txt");
 $uri = "https://getpocket.com/v3/oauth/authorize";
 $request_token = $_GET['request_token'];
+echo $request_token;
+echo '|';
 // 参数数组
 $data = array (
     'consumer_key' => '58985-37359df551b6a46182944f93', 

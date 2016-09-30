@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Login</title>
-</head>
-<body>
 <?php
 // error_reporting (E_ALL & ~E_NOTICE);
 // error_log("error_message", 3, "log.txt");
@@ -30,9 +24,19 @@ curl_setopt ( $ch, CURLOPT_POSTFIELDS, json_encode($data) );
 $return = curl_exec ( $ch );
 curl_close ( $ch );
  
-print_r($return);
+$ret = json_decode($return,true);
+$code = $ret['code'];
 
 ?>
-asd
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<script type="text/javascript">
+		alert("<?= $code ?>");
+	</script>
+</head>
+<body>
+<a href="https://getpocket.com/auth/authorize?request_token=<?= $code ?>&redirect_uri=http://btc.xiaxiatao.com/callback.php">login</a>
 </body>
 </html>
