@@ -1,5 +1,5 @@
 <?php
-namespace Pocket\Common;
+namespace PocketExample\Common;
 
 use Exception;
 
