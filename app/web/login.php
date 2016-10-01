@@ -32,11 +32,10 @@ $code = $ret['code'];
 <html>
 <head>
 	<title>Login</title>
-	<script type="text/javascript">
-		alert("<?= $code ?>");
-	</script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
 </head>
 <body>
-<a href="https://getpocket.com/auth/authorize?request_token=<?= $code ?>&redirect_uri=http://btc.xiaxiatao.com/callback.php">login</a>
+<button id="Login">Login</button>
+<a href="/connect.php">login</a>
 </body>
 </html>
