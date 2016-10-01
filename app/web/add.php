@@ -1,13 +1,31 @@
 <?php
+	session_start();
 	$name = $_SESSION['name'];
-	echo $name;
+	if(!$name){
+		header("Location:/login.php");
+	}
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Add</title>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
 </head>
 <body>
-Add post
+<input id="url" type="text" />
+<input id="title" type="text" />
+<button id="add">Add</button>
+<script type="text/javascript">
+	(function(){
+		$('#add').on('click',function(){
+			var data = {};
+			data.url = $('#url').val();
+			data.title = $('#title').val();
+			$.post('/add_api.php',data,function(ret){
+				console.log(ret);
+			});
+		});		
+	})()
+</script>
 </body>
 </html>
