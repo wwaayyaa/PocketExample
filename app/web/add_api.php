@@ -11,15 +11,15 @@
 	$url = $_POST['url'];
 	$title = $_POST['title'];
 	$time = time();
-	$consumer_key = '';
+	$consumer_key = '58985-37359df551b6a46182944f93';
 
 	$data['url'] = $url;
 	$data['title'] = $title;
-	$data['url'] = $time;
+	$data['time'] = $time;
 	$data['consumer_key'] = $consumer_key;
 	$data['access_token'] = $token;
 
-	$url = 'https://getpocket.com/v3/add';
+	$uri = 'https://getpocket.com/v3/add';
 	$ch = curl_init ();
 	// print_r($ch);
 	curl_setopt ( $ch, CURLOPT_URL, $uri );
