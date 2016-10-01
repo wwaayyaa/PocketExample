@@ -1,19 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Callback</title>
-</head>
-<body>
 <?php
-// error_reporting (E_ALL & ~E_NOTICE);
-// error_log("error_message", 3, "log.txt");
 $uri = "https://getpocket.com/v3/oauth/authorize";
-$request_token = $_GET['request_token'];
-echo $request_token;
-echo '|';
 $request_token = $_GET['code'];
-echo $request_token;
-echo '|';
 // 参数数组
 $data = array (
     'consumer_key' => '58985-37359df551b6a46182944f93', 
@@ -36,8 +23,30 @@ curl_setopt ( $ch, CURLOPT_POSTFIELDS, json_encode($data) );
 $return = curl_exec ( $ch );
 curl_close ( $ch );
  
-print_r($return);
-
+// print_r($return);
+$ret = json_decode($return, true);
+$access_token = $ret['access_token'];
+$name = $ret['username'];
+session_start();
+$_SESSION['name'] = $name;
+$_SESSION['access_token'] = $access_token;
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Callback</title>
+</head>
+<body>
+<?php 
+	if($access_token) { 
+		echo "认证成功"; 
+?>
+	<a href="">添加</a>
+	<a href="">列表</a>
+<?php
+	} else { 
+		echo "认证失败";
+	} 
 ?>
 </body>
 </html>
