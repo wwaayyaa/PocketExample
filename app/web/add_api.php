@@ -4,8 +4,8 @@
 	$name = $_SESSION['name'];
 	$token = $_SESSION['access_token'];
 
-	if(isset($_SESSION['access_token'])){
-		header("Location:/login.php");
+	if(!isset($_SESSION['access_token'])){
+		echo json_encode(array('status'=>0,'login expire'));
 	}
 
 	$url = $_POST['url'];
