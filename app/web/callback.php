@@ -41,8 +41,8 @@ $_SESSION['access_token'] = $access_token;
 	if($access_token) { 
 		echo "认证成功"; 
 ?>
-	<a href="">添加</a>
-	<a href="">列表</a>
+	<a href="/add.php">添加</a>
+	<a href="/list.php">列表</a>
 <?php
 	} else { 
 		echo "认证失败";

@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+if($_SESSION['name'] && $_SESSION['access_token']){
+	header("Location:/index.php");
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
