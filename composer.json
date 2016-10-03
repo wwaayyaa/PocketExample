@@ -9,5 +9,8 @@
             "email": "357466524@qq.com"
         }
     ],
-    "require": {}
+  "require": { },
+  "autoload": {
+    "psr-4": { "PocketExample\\": "./" } 
+  }
 }
