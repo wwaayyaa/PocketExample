@@ -1,16 +1,15 @@
 <?php
+require_once('../../vendor/autoload.php');
 use PocketExample\Common\Poster;
 use PocketExample\Config\Config;
 
 	session_start();
-
 	$name = $_SESSION['name'];
 	$token = $_SESSION['access_token'];
-	echo $name;
-	if(!isset($_SESSION['access_token'])){
-		header("Location:/login.php");
-	}
-	//$consumer_key = '58985-37359df551b6a46182944f93';
+    echo $name;
+    if(!isset($_SESSION['access_token'])){
+        header("Location:/login.php");
+    }
 
 	$data['consumer_key'] = Config::$consumer_key;
 	$data['access_token'] = $token;
@@ -19,7 +18,7 @@ use PocketExample\Config\Config;
 	$uri = 'https://getpocket.com/v3/get';
 	$return = Poster::post($uri, $data);
 	$ret = json_decode($return, true);
-	var_dump($ret);
+    //var_dump($ret);
 	$list = $ret['list'];
 
 	// if($ret['status'] != 1){

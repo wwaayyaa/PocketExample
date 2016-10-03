@@ -11,6 +11,12 @@
     ],
   "require": { },
   "autoload": {
-    "psr-4": { "PocketExample\\": "./" } 
-  }
+    "psr-4": { "PocketExample\\": "app/" } 
+  },
+  "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://packagist.phpcomposer.com"
+    }
+   }
 }

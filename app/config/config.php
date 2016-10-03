@@ -1,8 +1,7 @@
 <?php
 namespace PocketExample\Config;
 /**
- * mysql配置
- * @author walkor
+ * @author 357466524@qq.com
  */
 class Config
 {
