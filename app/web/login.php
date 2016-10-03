@@ -9,6 +9,7 @@ if($_SESSION['name'] && $_SESSION['access_token']){
 <html>
 <head>
 	<title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="http://v3.bootcss.com/examples/signin/signin.css" rel="stylesheet" />
 </head>

@@ -24,6 +24,7 @@ $_SESSION['access_token'] = $access_token;
 <html>
 <head>
 	<title>Callback</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link href="css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
