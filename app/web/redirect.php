@@ -1,4 +1,5 @@
 <?php
+require_once('../../vendor/autoload.php');
 use PocketExample\Config\Config;
 	session_start();
 

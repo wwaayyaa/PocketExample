@@ -1,4 +1,5 @@
 <?php
+require_once('../../vendor/autoload.php');
 use PocketExample\Common\Poster;
 use PocketExample\Config\Config;
 header('Content-Type:application/json');

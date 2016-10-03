@@ -1,4 +1,5 @@
 <?php
+require_once('../../vendor/autoload.php');
 use PocketExample\Common\Poster;
 use PocketExample\Config\Config;
 $uri = "https://getpocket.com/v3/oauth/request";
@@ -8,7 +9,7 @@ $data = array (
     'redirect_uri' => 'btc.xiaxiatao.com/callback.php' 
 );
 $redirect_uri = 'http://btc.xiaxiatao.com/callback.php';
- 
+
 $return = Poster::post($uri, $data);
 
 $ret = json_decode($return,true);
