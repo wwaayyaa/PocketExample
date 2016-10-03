@@ -57,7 +57,11 @@ $_SESSION['access_token'] = $access_token;
     </div>
 <?php
 	} else { 
-		echo "认证失败";
+?>
+    <div class="container" style="margin-top:50px;">
+        <h2 >Sign Fail.<a href="login.php">Try Again</a></h2>
+    </div>
+<?php
 	} 
 ?>
 </body>
