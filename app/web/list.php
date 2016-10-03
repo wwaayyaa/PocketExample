@@ -56,7 +56,7 @@ use PocketExample\Config\Config;
     <div class="container" style="margin-top:50px;">
         <table class="table table-condensed">
 	        <thead>
-		        <th>id</th><th>title</th><th>url</th><th>status</th>
+		        <th>id</th><th>title</th><th>resolved_title</th><th>url</th><th>status</th>
 	        </thead>
 	        <tbody>
 	        <?php 
@@ -65,6 +65,7 @@ use PocketExample\Config\Config;
 	        <tr>
 		        <td><?= $docket['item_id'] ?></td>
 		        <td><?= $docket['given_title'] ?></td>
+		        <td><?= $docket['resolved_title'] ?></td>
 		        <td>
 			        <?php if($docket['status'] == 0){ ?>
 			        <a href="/redirect.php?item_id=<?= $docket['item_id']?>&url=<?= urlencode($docket['given_url']) ?>" target="_blank">

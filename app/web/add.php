@@ -45,28 +45,25 @@
 
     </div>
 
-
-<!--<input id="url" type="text" />
-<input id="title" type="text" />-->
-<!--<button id="add">Add</button>-->
-<script type="text/javascript">
-	(function(){
-		$('#add').on('click',function(){
-			var data = {};
-			data.url = $('#url').val();
-			data.title = $('#title').val();
-			$.post('/add_api.php', data, function (ret) {
-			    console.log(ret);
-			    if (ret.status == 1) {
-			        alert(ret.msg);
-			        $('#url').val('');
-			        $('#title').val('');
-                } else {
-			        alert(ret.msg);
-			    }
-			});
-		});		
-	})()
-</script>
+    <script type="text/javascript">
+	    (function(){
+		    $('#add').on('click',function(){
+			    var data = {};
+			    data.url = $('#url').val();
+			    data.title = $('#title').val();
+			    $.post('/add_api.php', data, function (ret) {
+			        console.log(ret);
+			        if (ret.status == 1) {
+			            alert(ret.msg);
+			            $('#url').val('');
+			            $('#title').val('');
+                    } else {
+			            alert(ret.msg);
+			        }
+			    });
+		    });		
+	    })()
+    </script>
+    <script src="http://v3.bootcss.com/assets/js/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>
