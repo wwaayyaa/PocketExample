@@ -39,7 +39,7 @@
 
       <form class="form-signin" role="form">
         <h2 class="form-signin-heading">Add a Pocket</h2>
-        <input id="url" type="url" class="form-control" placeholder="url" required="" autofocus="">
+        <input id="url" type="url" class="form-control" placeholder="http://example.com" required="" autofocus="">
         <input id="title" type="text" class="form-control" placeholder="title" required="">
         <button id="add" class="btn btn-lg btn-primary btn-block" type="submit">Add</button>
       </form>
@@ -54,7 +54,6 @@
 			    data.title = $('#title').val();
                 var re = new RegExp(/http\:\/\/.+/i);
                 if (!re.test(data.url)) {
-                    $('#url').popover({ content: '请输入正确的url,如 http://qq.com' });
                     return;
                 }
 			    $.post('/add_api.php', data, function (ret) {

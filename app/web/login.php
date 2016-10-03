@@ -16,9 +16,10 @@ if($_SESSION['name'] && $_SESSION['access_token']){
 
     <div class="container">
 
-      <form class="form-signin" role="form">
-        <h3 class="form-signin-heading">Please sign in</h3>
+      <form class="form-signin" role="form" style="border: 1px solid #ddd;background-color: #fff;">
+        <h3 class="form-signin-heading">Sign Pocket - BTC example.</h3>
         <a href="/connect.php" class="btn btn-lg btn-primary btn-block" >Sign In</a>
+        <small>357466524@qq.com</small>
       </form>
 
     </div> <!-- /container -->
