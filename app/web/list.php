@@ -53,31 +53,34 @@ use PocketExample\Config\Config;
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-<table>
-	<thead>
-		<th><td>id</td><td>title</td><td>url</td><td>status</td></th>
-	</thead>
-	<?php 
-	foreach ($list as $docket) {
-	?>
-	<tbody>
-	<tr>
-		<td><?= $docket['item_id'] ?></td>
-		<td><?= $docket['given_title'] ?></td>
-		<td>
-			<?php if($docket['status'] == 0){ ?>
-			<a href="/redirect.php?item_id=<?= $docket['item_id']?>&url=<?= urlencode($docket['given_url']) ?>" target="_blank">
-			<?php }else{ ?>
-			<a href="<?= $docket['given_url'] ?>" target="_blank">
-			<?php } ?>
-				<?= $docket['given_url'] ?>
-			</a>
-		</td>
-		<td><?= $docket['status'] == 0 ? 'unread' : ($docket['status'] == 1 ? 'readed' : 'delete') ?></td>
-	</tr></tbody>
-	<?php
-	}
-	?>
-</table>
+    <div class="container">
+        <table class="table table-condensed">
+	        <thead>
+		        <th><td>id</td><td>title</td><td>url</td><td>status</td></th>
+	        </thead>
+	        <tbody>
+	        <?php 
+	        foreach ($list as $docket) {
+	        ?>
+	        <tr>
+		        <td><?= $docket['item_id'] ?></td>
+		        <td><?= $docket['given_title'] ?></td>
+		        <td>
+			        <?php if($docket['status'] == 0){ ?>
+			        <a href="/redirect.php?item_id=<?= $docket['item_id']?>&url=<?= urlencode($docket['given_url']) ?>" target="_blank">
+			        <?php }else{ ?>
+			        <a href="<?= $docket['given_url'] ?>" target="_blank">
+			        <?php } ?>
+				        <?= $docket['given_url'] ?>
+			        </a>
+		        </td>
+		        <td><?= $docket['status'] == 0 ? 'unread' : ($docket['status'] == 1 ? 'readed' : 'delete') ?></td>
+	        </tr>
+	        <?php
+	        }
+	        ?>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
