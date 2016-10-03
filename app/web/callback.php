@@ -10,7 +10,7 @@ $data = array (
     'code' => $request_token 
 );
  
-Poster::post($uri, $data);
+$return = Poster::post($uri, $data);
  
 // print_r($return);
 $ret = json_decode($return, true);
