@@ -22,7 +22,7 @@ if($_SESSION['name'] && $_SESSION['access_token']){
         <div style="clear:both;"></div>
         <a href="/connect.php" class="btn btn-lg btn-primary btn-block" >Sign In</a>
         <br />
-        <small style="text-align:center;">357466524@qq.com</small>
+        <div style="text-align:center;">author:WangYang 357466524@qq.com</div>
       </form>
 
     </div> <!-- /container -->

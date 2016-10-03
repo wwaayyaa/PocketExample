@@ -42,7 +42,7 @@ use PocketExample\Config\Config;
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">BTC.com</a>
+          <a class="navbar-brand" href="btc.com">BTC.com</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -75,7 +75,7 @@ use PocketExample\Config\Config;
 				        <?= $docket['given_url'] ?>
 			        </a>
 		        </td>
-		        <td><?= $docket['status'] == 0 ? 'unread' : ($docket['status'] == 1 ? 'readed' : 'delete') ?></td>
+		        <?= $docket['status'] == 0 ? '<td style="color:red">unread</td>' : ($docket['status'] == 1 ? '<td style="color:green">read</td>' : '<td>delete</td>') ?>
 	        </tr>
 	        <?php
 	        }
