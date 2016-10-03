@@ -12,7 +12,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="http://v3.bootcss.com/examples/signin/signin.css" rel="stylesheet" />
-	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.min.js"></script> 
+	<script type="text/javascript" src="bootstrap.min.js"></script> 
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
