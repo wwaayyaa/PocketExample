@@ -54,7 +54,8 @@
 			    data.title = $('#title').val();
                 var re = new RegExp(/http\:\/\/.+/i);
                 if (!re.test(data.url)) {
-                    $('#url').popover({content:'请输入正确的url,如 http://qq.com'});
+                    $('#url').popover({ content: '请输入正确的url,如 http://qq.com' });
+                    return;
                 }
 			    $.post('/add_api.php', data, function (ret) {
 			        console.log(ret);
