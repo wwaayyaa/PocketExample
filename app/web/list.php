@@ -53,10 +53,10 @@ use PocketExample\Config\Config;
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-    <div class="container">
+    <div class="container" style="margin-top:50px;">
         <table class="table table-condensed">
 	        <thead>
-		        <th><td>id</td><td>title</td><td>url</td><td>status</td></th>
+		        <th>id</th><th>title</th><th>url</th><th>status</th>
 	        </thead>
 	        <tbody>
 	        <?php 

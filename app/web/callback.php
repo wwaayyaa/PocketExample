@@ -26,12 +26,34 @@ $_SESSION['access_token'] = $access_token;
 	<title>Callback</title>
 </head>
 <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">BTC.com</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/list.php">List</a></li>
+            <li><a href="/add.php">Add</a></li>
+            <li><a href="/loginout.php">Sign Out</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
 <?php 
 	if($access_token) { 
-		echo "认证成功"; 
 ?>
-	<a href="/add.php">添加</a>
-	<a href="/list.php">列表</a>
+    <div class="container" style="margin-top:50px;">
+        <h2 >Welcome <?= $name ?>.</h2>
+    </div>
 <?php
 	} else { 
 		echo "认证失败";
