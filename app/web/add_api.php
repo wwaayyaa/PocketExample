@@ -18,6 +18,7 @@
 	$data['time'] = $time;
 	$data['consumer_key'] = $consumer_key;
 	$data['access_token'] = $token;
+	// var_dump($data);
 
 	$uri = 'https://getpocket.com/v3/add';
 	$ch = curl_init ();

@@ -1,0 +1,13 @@
+{
+    "name": "wwaayyaa/pocket-example",
+    "description": "a pocket api test",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Wang Yang",
+            "email": "357466524@qq.com"
+        }
+    ],
+    "require": {}
+}
