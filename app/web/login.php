@@ -2,7 +2,7 @@
 session_start();
 
 if($_SESSION['name'] && $_SESSION['access_token']){
-	header("Location:/list.php");
+	header("Location:/list");
 }
 ?>
 <!DOCTYPE html>
@@ -20,7 +20,7 @@ if($_SESSION['name'] && $_SESSION['access_token']){
         <h3 class="form-signin-heading">Sign Pocket</h3>
         <h5 class="form-signin-heading">- BTC example.</h5>
         <div style="clear:both;"></div>
-        <a href="/connect.php" class="btn btn-lg btn-primary btn-block" >Sign In</a>
+        <a href="/connect" class="btn btn-lg btn-primary btn-block" >Sign In</a>
         <br />
         <div style="text-align:center;">author:WangYang 357466524@qq.com</div>
       </form>

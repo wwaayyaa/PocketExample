@@ -6,9 +6,9 @@ $uri = "https://getpocket.com/v3/oauth/request";
 // 参数数组
 $data = array (
     'consumer_key' => Config::$consumer_key, 
-    'redirect_uri' => 'btc.xiaxiatao.com/callback.php' 
+    'redirect_uri' => 'btc.xiaxiatao.com/callback' 
 );
-$redirect_uri = 'http://btc.xiaxiatao.com/callback.php';
+$redirect_uri = 'http://btc.xiaxiatao.com/callback';
 
 $return = Poster::post($uri, $data);
 

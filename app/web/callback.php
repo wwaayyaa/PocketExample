@@ -41,9 +41,9 @@ $_SESSION['access_token'] = $access_token;
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="/list.php">List</a></li>
-            <li><a href="/add.php">Add</a></li>
-            <li><a href="/loginout.php">Sign Out</a></li>
+            <li><a href="/list">List</a></li>
+            <li><a href="/add">Add</a></li>
+            <li><a href="/loginout">Sign Out</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -59,7 +59,7 @@ $_SESSION['access_token'] = $access_token;
 	} else { 
 ?>
     <div class="container" style="margin-top:50px;">
-        <h2 >Sign Fail.<a href="login.php">Try Again</a></h2>
+        <h2 >Sign Fail.<a href="/login">Try Again</a></h2>
     </div>
 <?php
 	} 

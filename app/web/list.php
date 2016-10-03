@@ -8,7 +8,7 @@ use PocketExample\Config\Config;
 	$token = $_SESSION['access_token'];
     echo $name;
     if(!isset($_SESSION['access_token'])){
-        header("Location:/login.php");
+        header("Location:/login");
     }
 
 	$data['consumer_key'] = Config::$consumer_key;
@@ -47,8 +47,8 @@ use PocketExample\Config\Config;
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="javascript:;">List</a></li>
-            <li><a href="/add.php">Add</a></li>
-            <li><a href="/loginout.php">Sign Out</a></li>
+            <li><a href="/add">Add</a></li>
+            <li><a href="/loginout">Sign Out</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -68,7 +68,7 @@ use PocketExample\Config\Config;
 		        <td><?= $docket['resolved_title'] ?></td>
 		        <td>
 			        <?php if($docket['status'] == 0){ ?>
-			        <a href="/redirect.php?item_id=<?= $docket['item_id']?>&url=<?= urlencode($docket['given_url']) ?>" target="_blank">
+			        <a href="/redirect?item_id=<?= $docket['item_id']?>&url=<?= urlencode($docket['given_url']) ?>" target="_blank">
 			        <?php }else{ ?>
 			        <a href="<?= $docket['given_url'] ?>" target="_blank">
 			        <?php } ?>

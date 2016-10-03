@@ -2,7 +2,7 @@
 	session_start();
 	$name = $_SESSION['name'];
 	if(!$name){
-		header("Location:/login.php");
+		header("Location:/login");
 	}
 ?>
 <!DOCTYPE html>
@@ -27,9 +27,9 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="/list.php">List</a></li>
+            <li><a href="/list">List</a></li>
             <li class="active"><a href="javascript:;">Add</a></li>
-            <li><a href="/loginout.php">Sign Out</a></li>
+            <li><a href="/loginout">Sign Out</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -56,7 +56,7 @@
                 if (!re.test(data.url)) {
                     return;
                 }
-			    $.post('/add_api.php', data, function (ret) {
+			    $.post('/add_api', data, function (ret) {
 			        console.log(ret);
 			        if (ret.status == 1) {
 			            alert(ret.msg);

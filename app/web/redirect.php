@@ -7,7 +7,7 @@ use PocketExample\Config\Config;
 	$token = $_SESSION['access_token'];
 	echo 'please wait :)';
 	if(!isset($_SESSION['access_token'])){
-		header("Location:/login.php");
+		header("Location:/login");
 	}
 	$consumer_key = Config::$consumer_key;
 
