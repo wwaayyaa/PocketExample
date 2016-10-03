@@ -24,6 +24,7 @@ $_SESSION['access_token'] = $access_token;
 <html>
 <head>
 	<title>Callback</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
 
