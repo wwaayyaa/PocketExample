@@ -2,7 +2,7 @@
 session_start();
 
 if($_SESSION['name'] && $_SESSION['access_token']){
-	header("Location:/index.php");
+	header("Location:/list.php");
 }
 ?>
 <!DOCTYPE html>

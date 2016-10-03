@@ -1,4 +1,5 @@
 <?php
+use PocketExample\Config\Config;
 	session_start();
 
 	$name = $_SESSION['name'];
@@ -7,7 +8,7 @@
 	if(!isset($_SESSION['access_token'])){
 		header("Location:/login.php");
 	}
-	$consumer_key = '58985-37359df551b6a46182944f93';
+	$consumer_key = Config::$consumer_key;
 
 	$data['consumer_key'] = $consumer_key;
 	$data['access_token'] = $token;

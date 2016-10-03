@@ -21,8 +21,13 @@
 			var data = {};
 			data.url = $('#url').val();
 			data.title = $('#title').val();
-			$.post('/add_api.php',data,function(ret){
-				console.log(ret);
+			$.post('/add_api.php', data, function (ret) {
+			    console.log(ret);
+			    if (ret.status == 1) {
+			        alert(ret.msg);
+			    } else {
+			        alert(ret.msg);
+			    }
 			});
 		});		
 	})()
