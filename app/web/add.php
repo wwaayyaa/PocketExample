@@ -60,13 +60,10 @@
 			        console.log(ret);
 			        if (ret.status == 1) {
 			            alert(ret.msg);
-			            $('#url').val('');
-			            $('#title').val('');
                     } else {
 			            alert(ret.msg);
 			        }
 			    });
-			    return;
 		    });		
 	    })()
     </script>
