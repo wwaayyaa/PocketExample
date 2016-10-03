@@ -4,7 +4,7 @@ namespace PocketExample\Common;
 use Exception;
 
 /**
- * 数据库类
+ * @author 357466524@qq.com
  */
 class Poster
 {
